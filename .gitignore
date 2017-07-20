@@ -1,0 +1,4 @@
+#the is the file where we include directories that want git to ignore
+
+node_modules
+dist
