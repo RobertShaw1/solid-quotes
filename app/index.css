@@ -1,0 +1,26 @@
+/*ELEMENTS*/
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans,Unbuntu, Cantarell,Helvetica,Neue, sans-serif;
+    /*the above dynamically styles font based on the machine*/
+}
+
+/*ELEMENT.CLASS*/
+div.container.home {
+  height: 100vh;
+  margin: 200px 100px;
+}
+
+h1.qotd-header {
+  margin: 10px;
+  text-decoration: underline;
+}
+
+/*CLASSES*/
+.qotd {
+  padding: 0px 130px;
+}
+
+.attribution {
+  font-style: italic;
+}
