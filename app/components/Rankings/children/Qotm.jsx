@@ -8,7 +8,7 @@ require('../../../index.css');
 const quote = `"I want to change the world but they won’t give me the source code."`;
 const attribution = '-Source Obscure';
 
-export const QOTMCard = () => (
+export default QOTMCard => (
   <Card color="red" >
     <Card.Content header='Quote of the Month'/> 
     <Card.Content description={quote}/>

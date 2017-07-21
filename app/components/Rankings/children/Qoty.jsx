@@ -9,7 +9,7 @@ const quote = `"I want to change the world but they won’t give me the source c
 const attribution = '-Source Obscure';
 
 
-export const QOTYCard = () => (
+export default QOTYCard => (
   <Card color="red" >
     <Card.Content header='Quote of the Year'/> 
     <Card.Content description={quote}/>

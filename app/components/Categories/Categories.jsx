@@ -1,5 +1,5 @@
 //package dependicies
-const React = require('react');
+import React from 'react';
 
 //local dependicies
 require('../../index.css');

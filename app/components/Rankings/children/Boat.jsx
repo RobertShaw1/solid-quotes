@@ -8,7 +8,7 @@ require('../../../index.css');
 const quote = `"I want to change the world but they won’t give me the source code."`;
 const attribution = '-Source Obscure';
 
-export const BOATCard = () => (
+export default BOATCard => (
   <Card color="red">
     <Card.Content header='Best of All Time'/> 
     <Card.Content description={quote}/>
