@@ -9,8 +9,11 @@ import QotyCard from './children/Qoty.jsx'
 import BoatCard from './children/Boat.jsx'
 
 export default Rankings => (
-  <div className="ui text center aligned container">
-    <h2 className="ui center aligned categories-header">Rankings</h2>
+  <div className="rankings container">
+    <h2 className="ui center aligned rankings-header">Rankings</h2>
+    <div className="main-rankings container">
+      *Central Content*
+    </div>
     <div>
       <Card.Group>
         <QotmCard />
