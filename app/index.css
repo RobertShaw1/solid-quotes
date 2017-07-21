@@ -18,7 +18,13 @@ div.rankings.container {
 
 div.main-rankings.container {
   height: 50vh;
-  margin: 30px 50px;
+  margin: 10px 50px;
+}
+
+div.rankings.divider {
+  margin: 20px;
+   font-style: italic; 
+  font-family: Lucida;
 }
 
 div.ui.cards {

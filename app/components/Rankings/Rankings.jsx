@@ -1,6 +1,6 @@
 //package dependicies
 import React from 'react';
-import { Card } from 'semantic-ui-react';
+import { Card, Divider } from 'semantic-ui-react';
 
 //local dependicies
 require('../../index.css');
@@ -15,6 +15,7 @@ export default Rankings => (
       *Central Content*
     </div>
     <div>
+      <Divider className="rankings divider" horizontal>Popular Quotes</Divider>
       <Card.Group>
         <QotmCard />
         <QotyCard />
