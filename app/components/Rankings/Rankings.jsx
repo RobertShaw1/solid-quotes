@@ -14,14 +14,12 @@ export default Rankings => (
     <div className="main-rankings container">
       *Central Content*
     </div>
-    <div>
-      <Divider className="rankings divider" horizontal>Popular Quotes</Divider>
-      <Card.Group>
-        <QotmCard />
-        <QotyCard />
-        <BoatCard />
-      </Card.Group>
-    </div>
+    <Divider className="rankings divider" horizontal>Popular Quotes</Divider>
+    <Card.Group>
+      <QotmCard />
+      <QotyCard />
+      <BoatCard />
+    </Card.Group>
   </div>
 )
 
