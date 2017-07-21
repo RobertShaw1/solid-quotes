@@ -16,7 +16,10 @@ export default BOATCard => (
       <span>{attribution}</span>
     </Card.Meta>
     <Card.Content extra>
-         <Icon name='heart outline' color="red" inverted={true}/>
+      <Button circular color='facebook' icon='facebook' size='tiny' />
+      <Button circular color='twitter' icon='twitter' size='tiny' />
+      <Button circular color='red' icon={'heart outline'} size='tiny' inverted={true}/>
+      {/* <Icon name='heart outline' circular={true} color="red" /> */}
     </Card.Content>
   </Card>
 )
