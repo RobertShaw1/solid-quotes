@@ -10,9 +10,9 @@ const attribution = '-Source Obscure';
 
 
 export default QOTYCard => (
-  <Card color="red" >
-    <Card.Content header='Quote of the Year'/> 
-    <Card.Content description={quote}/>
+  <Card color="red" centered={true}>
+    <Card.Content header='Quote of the Year' /> 
+    <Card.Content description={quote} />
     <Card.Meta>
       <span>{attribution}</span>
     </Card.Meta>

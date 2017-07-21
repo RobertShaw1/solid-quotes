@@ -13,6 +13,7 @@ div.container.home {
 
 div.rankings.container {
   text-align: center;
+  margin: 50px 50px;
 }
 
 div.main-rankings.container {
@@ -20,6 +21,9 @@ div.main-rankings.container {
   margin: 30px 50px;
 }
 
+div.ui.cards {
+   margin: 0px 100px; 
+}
 
 
 h1.qotd-header {

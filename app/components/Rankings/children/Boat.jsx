@@ -9,9 +9,9 @@ const quote = `"I want to change the world but they won’t give me the source c
 const attribution = '-Source Obscure';
 
 export default BOATCard => (
-  <Card color="red">
-    <Card.Content header='Best of All Time'/> 
-    <Card.Content description={quote}/>
+  <Card color="red" centered={true}>
+    <Card.Content header='Best of All Time' /> 
+    <Card.Content description={quote} />
     <Card.Meta>
       <span>{attribution}</span>
     </Card.Meta>
