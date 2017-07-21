@@ -2,7 +2,7 @@
 const React = require('react');
 
 //local dependicies
-require('../index.css');
+require('../../index.css');
 
 
 export default Categories => (

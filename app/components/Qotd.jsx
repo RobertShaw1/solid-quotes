@@ -1,5 +1,5 @@
 //package dependicies
-const React = require('react');
+import React from 'react';
 import 'semantic-ui-react';
 
 //local dependicies
@@ -18,15 +18,16 @@ const date = () => {
   return `${dayName[dayOfWeek]}, ${monthName[month]} ${day}, ${year}`
 }
 
+//Quote of the Day Component
 export default QOTD => (  
   <div className="ui text center aligned container home">
     <h1 className="ui center aligned qotd-header">Quote of the Day</h1>
     <h3 className="ui center aligned date-header">{date()}</h3>
-    <p className="qotd">
+    <div className="qotd">
       "Our deepest fear is not that we are inadequate.  Our deepest fear is that we are powerful beyond measure."
       <br />
       <br />
-      <div className="attribution">-Marianne Williamson</div>
-    </p>
+      <p className="attribution">-Marianne Williamson</p>
+    </div>
   </div>
 )

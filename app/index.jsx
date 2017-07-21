@@ -1,22 +1,22 @@
 //package dependicies
-const React = require('react');
-const ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 //local dependicies
 import './index.css';
 import QOTD from './components/Qotd.jsx';
-import Categories from './components/Categories.jsx'
-import Rankings from './components/Rankings.jsx'
-import NavBar from './components/Nav.jsx';
+import Categories from './components/Categories/Categories.jsx'
+import Rankings from './components/Rankings/Rankings.jsx'
+import NavBar from './components/NavBar.jsx';
 
 const App = () => (
     <Router>
       <div>
         <Route path="/" component={NavBar} />
-        <Route exact path="/" component={QOTD} />
+        <Route exact path="/rankings" component={QOTD} />
         <Route path="/categories" component={Categories} />
-        <Route path="/rankings" component={Rankings} />
+        <Route path="/" component={Rankings} />
         {/* <Route component={NoMatch}/> */}
       </div>
     </Router>
