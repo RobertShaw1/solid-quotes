@@ -17,8 +17,7 @@ export default QOTYCard => (
       <span>{attribution}</span>
     </Card.Meta>
     <Card.Content extra>
-      <Icon name='user' />
-      4 Friends
+      <Icon name='heart outline' color="red" inverted={true} />
     </Card.Content>
   </Card>
 )
