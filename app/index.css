@@ -6,7 +6,7 @@ body {
 }
 
 /*ELEMENT.CLASS*/
-div.container.home {
+div.home.container {
   height: 100vh;
   margin: 150px 100px;
 }
@@ -16,12 +16,12 @@ div.rankings.container {
   margin: 10px 50px;
 }
 
-div.main-rankings.container {
+div.main-rankings.container, div.main-categories.container {
   height: 50vh;
-  margin: 10px 50px;
+  margin: 25px 50px;
 }
 
-div.rankings.divider {
+div.divider {
   margin: 20px;
    font-style: italic; 
   font-family: Lucida;
@@ -44,4 +44,8 @@ h1.qotd-header {
 
 .attribution {
   font-style: italic;
+}
+
+.single-category-header {
+  margin: 10px 0px;
 }

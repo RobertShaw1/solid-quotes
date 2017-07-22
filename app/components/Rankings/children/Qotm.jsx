@@ -1,6 +1,6 @@
 //package dependicies
 import React from 'react';
-import { Button, Card, Header, Icon } from 'semantic-ui-react';
+import { Button, Card, Header, Icon, Rating } from 'semantic-ui-react';
 
 //local dependicies
 require('../../../index.css');
@@ -16,9 +16,10 @@ export default QOTMCard => (
       <span>{attribution}</span>
     </Card.Meta>
     <Card.Content extra>
+      <Rating icon='heart' defaultRating={0} maxRating={1} />
       <Button circular color='facebook' icon='facebook' size='tiny' />
       <Button circular color='twitter' icon='twitter' size='tiny' />
-      <Button circular color='red' icon={'heart outline'} size='tiny' inverted={true}/>
+      <Button circular color='white' icon={<Rating icon='heart' defaultRating={0} maxRating={1} size="tiny" />} size='tiny' inverted={false}/>
       {/* <Icon name='heart outline' circular={true} color="red" /> */}
     </Card.Content>
   </Card>

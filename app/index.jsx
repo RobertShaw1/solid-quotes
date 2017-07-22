@@ -14,9 +14,9 @@ const App = () => (
     <Router>
       <div>
         <Route path="/" component={NavBar} />
-        <Route exact path="/rankings" component={QOTD} />
-        <Route path="/categories" component={Categories} />
-        <Route path="/" component={Rankings} />
+        <Route exact path="/rankings" component={Rankings} />
+        <Route path="/categories" component={QOTD} />
+        <Route exact path="/" component={Categories} />
         {/* <Route component={NoMatch}/> */}
       </div>
     </Router>

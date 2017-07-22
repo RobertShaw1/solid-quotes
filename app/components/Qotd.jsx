@@ -20,7 +20,7 @@ const date = () => {
 
 //Quote of the Day Component
 export default QOTD => (  
-  <div className="ui text center aligned container home">
+  <div className="ui text center aligned home container">
     <h1 className="ui center aligned qotd-header">Quote of the Day</h1>
     <h3 className="ui center aligned date-header">{date()}</h3>
     <div className="qotd">
