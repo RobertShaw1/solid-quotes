@@ -10,8 +10,8 @@ import BoatCard from './children/Boat.jsx'
 
 export default Rankings => (
   <div className="rankings container">
-    <h2 className="ui center aligned rankings-header">Rankings</h2>
     <div className="main-rankings container">
+    <h2 className="ui center aligned rankings-header">Rankings</h2>
       *Central Content*
     </div>
     <Divider className="rankings divider" horizontal>Popular Quotes</Divider>

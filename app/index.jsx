@@ -13,7 +13,8 @@ import NavBar from './components/NavBar.jsx';
 const App = () => (
     <Router>
       <div>
-        <Route path="/" component={NavBar} />
+        <NavBar />
+        {/* <Route path="/" component={NavBar} /> */}
         <Route exact path="/rankings" component={Rankings} />
         <Route path="/categories" component={QOTD} />
         <Route exact path="/" component={Categories} />

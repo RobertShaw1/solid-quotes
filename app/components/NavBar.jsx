@@ -17,7 +17,7 @@ export default class NavBar extends Component {
   render() {
     const { activeItem } = this.state;
     return (
-      <Menu color="red" inverted pointing secondary widths={3}>
+      <Menu fixed="top" color="red" inverted pointing secondary widths={3}>
         <Menu.Item as={Link} to="/" name="Quote of the Day" active={activeItem === 'Quote of the Day'} onClick={this.handleItemClick} />
 
         <Menu.Item as={Link} to="/categories" name="Categories" active={activeItem === 'Categories'} onClick={this.handleItemClick} />
