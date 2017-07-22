@@ -11,15 +11,17 @@ import BoatCard from './children/Boat.jsx'
 export default Rankings => (
   <div className="rankings container">
     <div className="main-rankings container">
-    <h2 className="ui center aligned rankings-header">Rankings</h2>
+      <h2 className="ui center aligned rankings-header">Rankings</h2>
       *Central Content*
     </div>
-    <Divider className="rankings divider" horizontal>Popular Quotes</Divider>
-    <Card.Group>
-      <QotmCard />
-      <QotyCard />
-      <BoatCard />
-    </Card.Group>
+    <div className="popular-quotes">
+      <Divider className="rankings divider" horizontal>Popular Quotes</Divider>
+      <Card.Group>
+        <QotmCard />
+        <QotyCard />
+        <BoatCard />
+      </Card.Group>
+    </div>
   </div>
 )
 

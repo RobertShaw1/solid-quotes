@@ -14,7 +14,6 @@ const App = () => (
     <Router>
       <div>
         <NavBar />
-        {/* <Route path="/" component={NavBar} /> */}
         <Route exact path="/rankings" component={Rankings} />
         <Route path="/categories" component={QOTD} />
         <Route exact path="/" component={Categories} />

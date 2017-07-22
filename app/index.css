@@ -48,6 +48,10 @@ h1.qotd-header {
   font-style: italic;
 }
 
+.popular-quotes {
+  padding-top: 50px;
+}
+
 .single-category-header {
   margin: 10px 0px;
 }
