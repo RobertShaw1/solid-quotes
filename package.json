@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "create": "webpack",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "seed": "SEEDING=true node seed.js"
   },
   "babel": {
     "presets": [
