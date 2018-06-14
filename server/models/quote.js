@@ -4,7 +4,7 @@ const db = require('../db')
 
 const Quote = db.define('quote', {
   content: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
     allowNull: false
   },
   attribution: {
