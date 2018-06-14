@@ -1,21 +1,27 @@
+'use strict'
 
-const Sequelize = require('Sequelize')
+const debug = require('debug')('sql');
+const chalk = require('chalk');
+const Sequelize = require('sequelize');
+const dbName = require('../package.json').name;
 
-let db = new Sequelize('postgres://localhost:5432/quotes');
+let connectionString;
 
-// force: true will drop the table if it already exists
-let options = {};
-if (process.env.SEEDING === "true") {
-  options = Object.assign({}, {force: true})
+if (process.env.NODE_ENV === 'test') {
+  console.log(chalk.magenta('In test environment...'));
+  connectionString = `postgres://localhost:5432/${dbName}-test`;
+} else {
+  connectionString = process.env.DATABASE_connectionString || `postgres://localhost:5432/${dbName}`;
 }
 
-db.sync(options).then(() => {
-  // Table created
-  // return Quote.create({
-  //   content: `“I want to change the world but they won’t give me the source code.”`,
-  //   attribution: `-Source Obscure`,
-  // });
-  console.log('db synced!')
+console.log(chalk.yellow(`\nOpening database connection to ${connectionString}\n`));
+
+// create the database instance that can be used in other database files
+const db = new Sequelize(connectionString, {
+  operatorsAliases: false,
+  logging: debug, // export DEBUG=sql in the environment to get SQL queries
+  native: true, /* lets Sequelize know we can use pg-native for ~30% more speed
+  (this may cause problems so take it out if necessary) */
 });
 
 module.exports = db;
