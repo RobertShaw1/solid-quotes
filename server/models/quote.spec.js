@@ -1,15 +1,28 @@
-const assert = require('chai').assert
+/* Node Modules */
+const chai = require('chai')
+const expect = chai.expect
+const should = chai.should()
+
+/* Local Modules */
 const db = require('../db')
 const { Quote } = require('./index')
 
 describe('Quote', function() {
-  afterEach(function() {
-    db.sync({force: true});
+  let newQuote;
+
+  beforeEach(async function() {
+    await db
+      .sync({force: true})
+      .then(async () => {
+        newQuote = await Quote.create({content: 'What is this?', attribution: 'Joshua'})
+        return newQuote;
+      })
   })
 
   it('Quote should have content', function() {
-      Quote
-        .create({content: 'What is this?', attribution: 'Joshua'})
-        .then(newQuote => assert.equal(newQuote.content, 'What is this?'))
+    expect(newQuote.content).to.equal('What is this?')
+  })
+  it('Quote should have authorId property', function() {
+    newQuote.dataValues.should.have.property('authorId');
   })
 })
