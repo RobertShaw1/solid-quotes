@@ -12,13 +12,17 @@
   you will have to change it in every module that requires it
  */
 
+const Author = require('./author');
 const Category = require('./category');
 const Quote = require('./quote');
 
 // http://docs.sequelizejs.com/manual/tutorial/associations.html
 /* Add associations here */
+Author.hasMany(Quote);
+Category.hasMany(Quote);
 
 module.exports = {
+  Author,
   Category,
   Quote,
 };

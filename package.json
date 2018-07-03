@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open",
-    "seed": "SEEDING=true node seed.js"
+    "seed": "SEEDING=true node seed.js",
+    "test": "TESTING=true mocha ./server/**/*.spec.js -w"
   },
   "author": "",
   "license": "ISC",
@@ -26,10 +27,12 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-2": "^6.18.0",
+    "chai": "^4.1.2",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^3.2.0",
+    "mocha": "^5.2.0",
     "style-loader": "^0.21.0",
     "webpack": "^4.12.2",
     "webpack-cli": "^3.0.8",

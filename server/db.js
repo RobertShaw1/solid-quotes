@@ -7,8 +7,8 @@ const dbName = require('../package.json').name;
 
 let connectionString;
 
-if (process.env.NODE_ENV === 'test') {
-  console.log(chalk.magenta('In test environment...'));
+if (process.env.TESTING) {
+  console.log(chalk.magenta('\n In test environment...'));
   connectionString = `postgres://localhost:5432/${dbName}-test`;
 } else {
   connectionString = process.env.DATABASE_connectionString || `postgres://localhost:5432/${dbName}`;

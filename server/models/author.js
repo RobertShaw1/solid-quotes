@@ -1,10 +1,10 @@
 const Sequelize = require('Sequelize')
 const db = require('../db')
 
-const Category = db.define('category', {
+const Author = db.define('author', {
   name: {
     type: Sequelize.STRING,
   },
 });
 
-module.exports = Category;
+module.exports = Author;
