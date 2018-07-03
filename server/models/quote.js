@@ -3,14 +3,16 @@ const db = require('../db')
 
 
 const Quote = db.define('quote', {
-  content: {
+  text: {
     type: Sequelize.TEXT,
-    allowNull: false
+    allowNull: false,
   },
-  attribution: {
-    type: Sequelize.STRING,
-    allowNull: false
-  }
+  likes: {
+    type: Sequelize.INTEGER,
+  },
+  shares: {
+    type: Sequelize.INTEGER,
+  },
 });
 
 module.exports = Quote;
