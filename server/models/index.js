@@ -22,6 +22,7 @@ Author.hasMany(Quote);
 Category.hasMany(Quote);
 
 module.exports = {
+  Author,
   Category,
   Quote,
 };
