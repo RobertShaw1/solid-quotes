@@ -8,18 +8,20 @@ const db = require('../db')
 const { Author, Quote } = require('./index')
 
 describe('Quote', function() {
-  let newQuote;
+  let newQuote, oldQuote;
 
   beforeEach(async function() {
     await db
       .sync({force: true})
       .then(async () => {
-        newQuote =
-          await Quote.create(
-            {text: 'What is this?', author: {name: 'Joshua'}},
-            {include: Author}
-          )
+        const entry1 = {text: 'What is this?', author: {name: 'Joshua'}};
+        newQuote = await createQuote(entry1);
         return newQuote;
+      })
+      .then(async () => {
+        const entry2 = {text: 'Borrring!', author: {name: 'Joshua'}};
+        oldQuote = await createQuote(entry2);
+        return oldQuote;
       })
   })
 
@@ -35,7 +37,26 @@ describe('Quote', function() {
   it('should have authorId property', function() {
     newQuote.dataValues.should.have.property('authorId');
   })
-  it('should have categoryId property', function() {
-    newQuote.dataValues.should.have.property('categoryId');
+  it('should eagerly load author', async function() {
+    const sampleQuote =
+      await Quote.findAll({
+        where: {id: 1},
+        include: [{ all: true }],
+      })
+
+    // console.log('sampleQuote[0]: ', sampleQuote[0])
+    sampleQuote[0].should.have.property('author')
   })
 })
+
+
+function createQuote(quote) {
+  return Author
+    .findOrCreate({ where: { name: quote.author.name }})
+    .spread((author, created) => author)
+    .then(author => (
+      Quote
+        .create(quote)
+        .then(quote => quote.setAuthor(author))
+    ))
+}
