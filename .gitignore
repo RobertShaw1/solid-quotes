@@ -1,5 +1,7 @@
 #the is the file where we include directories that want git to ignore
 
-node_modules
+.nyc_output
+coverage
 dist
+node_modules
 quoteData.js
