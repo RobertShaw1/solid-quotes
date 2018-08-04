@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --open",
     "seed": "SEEDING=true node seed.js",
-    "test": "TESTING=true mocha ./server/**/*.spec.js -w"
+    "test-server": "TESTING=true mocha ./server/**/*.spec.js -w"
   },
   "author": "",
   "license": "ISC",
