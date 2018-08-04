@@ -19,9 +19,30 @@ const Quote = require('./quote');
 // http://docs.sequelizejs.com/manual/tutorial/associations.html
 /* Add associations here */
 Quote.belongsTo(Author);
-Quote.belongsTo(Category);
 Author.hasMany(Quote);
-Category.hasMany(Quote);
+
+Category.belongsToMany(Quote, { through: 'QuoteCategory' });
+Quote.belongsToMany(Category, { through: 'QuoteCategory' });
+
+
+Quote.beforeCreate(async (quote, options) => {
+  const { author, categories } = quote;
+
+  console.log('auhtor: ', quote.author)
+
+  const quoteAuthor =
+    await Author.findOrCreate({
+      where: {
+        name: author ? author.name : 'Unknown',
+      },
+    })
+    .spread((instance, created) => instance)
+
+  quote.setAuthor(quoteAuthor)
+  // console.log('quote: ', quote)
+  return quote;
+})
+
 
 module.exports = {
   Author,

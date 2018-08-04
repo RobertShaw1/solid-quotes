@@ -17,3 +17,8 @@ const Quote = db.define('quote', {
 });
 
 module.exports = Quote;
+
+/**
+ * need a beforeCreate hook to set author
+ * This will prevent quotes from being created without an author
+ */

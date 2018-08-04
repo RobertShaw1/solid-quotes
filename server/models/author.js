@@ -5,6 +5,7 @@ const Author = db.define('author', {
   name: {
     type: Sequelize.STRING,
     unique: true,
+    defaultValue: 'Unknown',
   },
 });
 
