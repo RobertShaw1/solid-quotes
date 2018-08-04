@@ -1,5 +1,7 @@
-#the is the file where we include directories that want git to ignore
-
-node_modules
+#the file where we include directories/files that want git to ignore
+.nyc_output
+_taskList.md
+coverage
 dist
+node_modules
 quoteData.js
