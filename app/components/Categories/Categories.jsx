@@ -3,7 +3,7 @@ import React from 'react';
 import { Grid, Label } from 'semantic-ui-react';
 
 //local dependicies
-require('../../index.css');
+import '../../index.css';
 
 export default Categories => (
   <div className="main-categories container">
