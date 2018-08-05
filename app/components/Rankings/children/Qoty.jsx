@@ -3,7 +3,7 @@ import React from 'react';
 import { Button, Card, Header, Icon } from 'semantic-ui-react';
 
 //local dependicies
-require('../../../index.css');
+import '../../../index.css';
 
 const quote = `"I want to change the world but they won’t give me the source code."`;
 const attribution = '-Source Obscure';
@@ -11,7 +11,7 @@ const attribution = '-Source Obscure';
 
 export default QOTYCard => (
   <Card color="red" centered={true}>
-    <Card.Content header='Quote of the Year' /> 
+    <Card.Content header='Quote of the Year' />
     <Card.Content description={quote} />
     <Card.Meta>
       <span>{attribution}</span>

@@ -3,7 +3,7 @@ import React from 'react';
 import 'semantic-ui-react';
 
 //local dependicies
-require('../index.css');
+import '../index.css';
 
 //Date Structure
 const date = () => {
@@ -19,7 +19,7 @@ const date = () => {
 }
 
 //Quote of the Day Component
-export default QOTD => (  
+export default QOTD => (
   <div className="ui text center aligned home container">
     <h1 className="ui center aligned qotd-header">Quote of the Day</h1>
     <h3 className="ui center aligned date-header">{date()}</h3>
