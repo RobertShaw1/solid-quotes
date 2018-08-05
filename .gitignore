@@ -1,4 +1,5 @@
 #the file where we include directories/files that want git to ignore
+.cache
 .nyc_output
 _taskList.md
 coverage
